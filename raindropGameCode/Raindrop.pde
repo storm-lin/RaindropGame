@@ -16,8 +16,8 @@ class Raindrop
   }
   void display()
   {
-    noStroke();//set stroke and fill
-    fill(0, 0, 255);
+    noStroke();//set stroke and translucent fill
+    fill(0, 100, 255, 150);
     ellipse(loc.x, loc.y, diam, diam);//draw the raindrop at its current location
   }
   boolean isInContactWith(PVector p)
