@@ -1,5 +1,5 @@
 PVector mouse;   //declare a P
-Raindrop[] r = new Raindrop[20];      //declare a new Raindrop called r
+Raindrop[] r = new Raindrop[50];      //declare a new Raindrop called r
 PImage back;//declare a PImage
 
 // On your own, create an array of Raindrop objects instead of just one
@@ -12,7 +12,7 @@ void setup() {
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
   for(int i = 0; i < r.length; i++)//for each raindrop
   {
-    r[i] = new Raindrop(random(width), 0);   //Initialize r. The parameters used are the initial x and y positions
+    r[i] = new Raindrop(random(width), random(height));   //Initialize r. The parameters used are the initial x and y positions
   }
   back = loadImage("beach_stones_high_grass_sea_clouds_cloudy_800x600_hd-wallpaper-234683.jpg");//initialize background image
 }
@@ -31,4 +31,6 @@ void draw() {
       r[i].reset();                           //if it does, reset the raindrop
     }
   }
+  fill(100);
+  triangle(mouseX - 35, mouseY - 10, mouseX, mouseY + 25, mouseX + 35, mouseY - 10);//draw a catcher at the mouse
 }
