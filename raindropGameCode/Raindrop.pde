@@ -7,7 +7,7 @@ class Raindrop
     loc = new PVector(x, y);//initialize movement vectors and diameter
     vel = new PVector(0, 0);
     acc = new PVector(0, 0.2);
-    diam = 40;
+    diam = 30;
   }
   void fall()
   {
